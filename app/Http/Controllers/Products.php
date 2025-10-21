@@ -10,12 +10,12 @@ class Products extends Controller
 {
     public function newProductEntry(Request $request) {
         try {
-
+            
             $validate = Validator::make($request->all(), [
-                'productId'         => 'required|string',
-                'prductName'        => 'required|string',
-                'productPrice'      => 'required|number',
-                'productCategory'   => 'required|string'
+                'productId'         => 'required',
+                'productName'        => 'required',
+                'productPrice'      => 'required',
+                'productCategory'   => 'required'
             ]);
 
             if($validate->fails()) {
@@ -29,7 +29,7 @@ class Products extends Controller
 
             DB::table('products')->insert([
                 'productId'         => $request->input('productId'),
-                'prductName'        => $request->input('prductName'),
+                'productName'        => $request->input('productName'),
                 'productPrice'      => $request->input('productPrice'),
                 'productCategory'   => $request->input('productCategory')
             ]);
@@ -39,6 +39,24 @@ class Products extends Controller
             return response()->json([
                 'status'    => 'error',
                 'message'   => 'Produk berhasil ditambahkan'
+            ], 500);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status'    => 'error',
+                'message'   => 'Server Error'
+            ], 500);
+        }
+    }
+
+    public function getProductEntries() {
+        try {
+
+            $data = DB::table('products')->limit(10)->get();
+
+            return response()->json([
+                'status'    => 'success',
+                'message'   => 'Data berhasil diambil',
+                'data'      => $data
             ], 500);
         } catch (\Throwable $th) {
             return response()->json([
