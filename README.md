@@ -1,9 +1,9 @@
 # Requirements
 
-A. PHP 8+
-B. MySQL or MariaDB
-C. Composer
-D. (Untuk Pengetesa) Postman / Insomnia / Thunderclient
+1. PHP 8+
+2. MySQL or MariaDB
+3. Composer
+4. (Untuk Pengetesa) Postman / Insomnia / Thunderclient
 
 # Cara Install
 
