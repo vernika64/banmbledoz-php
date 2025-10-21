@@ -11,7 +11,7 @@ D. (Untuk Pengetesa) Postman / Insomnia / Thunderclient
 
 PASTIKAN database sudah dibuat (dengan nama sesukamu) sebelum menjalankan tutorial dibawah
 
-1. clone atau download repo ini
+1. Clone atau Download repo ini
 2. Install Dependency di dalam project menggunakan command
     ```
     composer install
@@ -22,7 +22,7 @@ PASTIKAN database sudah dibuat (dengan nama sesukamu) sebelum menjalankan tutori
     ```
     php artisan key:generate
     ```
-5. jalankan project menggunakan xampp / wampp menggunakan virtual host **atau** dengan command dibawah
+5. Jalankan project menggunakan xampp / wampp menggunakan virtual host **atau** dengan command dibawah
     ```
     php artisan serve
     ```
