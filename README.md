@@ -22,7 +22,11 @@ PASTIKAN database sudah dibuat (dengan nama sesukamu) sebelum menjalankan tutori
     ```
     php artisan key:generate
     ```
-5. Jalankan project menggunakan xampp / wampp menggunakan virtual host **atau** dengan command dibawah
+5. Ekspor tabel ke database menggunakan command ini
+   ```
+   php artisan migrate
+   ```
+6. Jalankan project menggunakan xampp / wampp menggunakan virtual host **atau** dengan command dibawah
     ```
     php artisan serve
     ```
@@ -31,7 +35,7 @@ PASTIKAN database sudah dibuat (dengan nama sesukamu) sebelum menjalankan tutori
     php artisan serve --host 192.x.x.x --port 8000
     ```
     port 8000 bisa diubah dengan angka lain selama port tersebut masih belum dipakai
-6. Selesai
+7. Selesai
 
 pada project ini hanya ada dua rute API yang bisa diakses:
 
